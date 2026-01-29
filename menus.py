@@ -1,4 +1,170 @@
 
+
+# def menuPrincipal():
+#     salir = False
+#     while not salir:
+#         print("\n--- GESTOR INTELIGENTE DE DATOS ---")
+#         print("0. Salir")
+#         print("1. Añadir usuario")
+#         print("2. Mostrar usuarios")
+#         print("3. Gestión de productos")
+#         print("4. Estadísticas")
+#         print("5. Búsquedas")
+
+#         opcion = input("Elige una opción: ").strip()
+
+#         if opcion == "1":
+#             print("Añadir usuario")
+#             print(">>")
+#         elif opcion == "2":
+#             print("Mostrar usuarios")
+#             print(">>")
+#         elif opcion == "3":
+#             print("Abrir submenu productos")
+#             print(">>")
+#             menuProductos()  
+#         elif opcion == "4":
+#             print("Abrir submenu estadisticas")
+#             print(">>")
+#             menuEstadisticas() 
+#         elif opcion == "5":
+#             print("Abrir submenu busquedas")
+#             print(">>")
+#             menuBusquedas()  
+#         elif opcion == "0":
+#             print("Salir")
+#             print(">>")
+#             print("Saliendo del programa...")
+#             salir = True
+#         else:
+#             print("Opción no válida. Inténtalo de nuevo.")
+
+# # Submenu de búsquedas
+# def menuBusquedas():
+#     menuBusqueda = False
+
+#     while not menuBusqueda:
+#         print("\n--- MENÚ DE BÚSQUEDAS ---")
+#         print("0. Volver al menú principal")
+#         print("1. Buscar usuario por ID")
+#         print("2. Buscar usuarios por ciudad")
+        
+
+#         opcion = input("Elige una opción: ").strip()
+
+#         if opcion == "1":
+#             print("Buscar usuario por ID")
+#             print(">>")
+#         elif opcion == "2":
+#             print("Buscar usuario por ciudad")
+#             print(">>")
+#         elif opcion == "0":
+#             menuBusqueda = True
+#         else:
+#             print("Opción no válida.")
+
+# # Submenu de Productos
+# def menuProductos():
+#     menuproductos = False
+#     while not menuproductos:
+#         print("\n--- MENÚ DE PRODUCTOS ---")
+#         print("0. Volver al menú principal")
+#         print("1. Añadir producto")
+#         print("2. Mostrar productos")
+#         print("3. Modificar precio")
+#         print("4. Eliminar producto")
+        
+
+#         opcion = input("Elige una opción: ").strip()
+
+#         if opcion == "1":
+#             print("Añadir productos")
+#             print(">>")
+#         elif opcion == "2":
+#             print("Mostrar productos")
+#             print(">>")
+#         elif opcion == "3":
+#             print("Modificar precio")
+#             print(">>")
+#         elif opcion == "4":
+#             print("Eliminar producto")
+#             print(">>")
+#         elif opcion == "0":
+#             menuproductos = True
+#         else:
+#             print("Opción no válida.")
+# def menuEstadisticas():
+#     menuestadisticas = False
+#     while not menuestadisticas:
+#         print("\n--- MENÚ DE ESTADÍSTICAS ---")
+#         print("0. Volver al menú principal")
+#         print("1. Estadísticas de usuarios")
+#         print("2. Estadísticas de productos")
+        
+
+#         opcion = input("Elige una opción: ").strip()
+
+#         if opcion == "1":
+#             print("Estadísticas de usuarios")
+#             print(">>")
+#         elif opcion == "2":
+#             print("Estadísticas de productos")
+#             print(">>")
+#         elif opcion == "0":
+#             menuestadisticas = True
+#         else:
+#             print("Opción no válida.")
+# def subMenuestadisticasUsuarios():
+#     menuEstadisticasUsuarios = False
+#     while not menuEstadisticasUsuarios:
+#         print("\n--- ESTADÍSTICAS DE USUARIOS ---")
+#         print("0. Volver al menú principal")
+#         print("1. Total de usuarios")
+#         print("2. Edad media de usuarios")
+#         print("3. Edad mas baja")
+#         print("4. Edad mas alta")
+        
+#         opcion=input("Elige una opción: ").strip()
+#         if opcion == "1":
+#             print("Total de usuarios") 
+#         elif opcion == "2":
+#             print("Edad media de usuarios")
+#         elif opcion == "3":
+#             print("Edad mas baja") 
+#         elif opcion == "4":
+#             print("Edad mas alta")
+#         elif opcion == "0":
+#             print("Volver al menú principal")
+#             menuEstadisticasUsuarios = True
+#         else:
+#             print("Opción no válida.")  
+# def subMenuestadisticasProductos():
+#     print("\n--- ESTADÍSTICAS DE PRODUCTOS ---")
+#     menuEstadisticasProductos = False
+#     while not menuEstadisticasProductos:
+#         print("0. Volver al menú principal")
+#         print("1. Total de productos")
+#         print("2. Precio medio de productos")
+        
+#         opcion=input("Elige una opción: ").strip()
+#         if opcion == "1":
+#             print("Total de productos") 
+#         elif opcion == "2":
+#             print("Precio medio de productos")
+#         elif opcion == "0":
+#             print("Volver al menú principal")
+#             menuEstadisticasProductos = True
+#         else:
+#             print("Opción no válida.")
+# def main():
+#     menuPrincipal()
+
+# # main
+# main()
+
+
+
+
 """
 Funcion para crear usuarios:
  Crea la tupla usuario a partir de un nombre, una edad y una ciudad
@@ -55,11 +221,11 @@ la clave es numerica y la incrementa de manera automatica cada vez que se
 añade un usuario.
 Crea los usuarios a partir de la funcion "Crear usuario"
 """
-def añadirUsuario(usuarios:dict):
-    newKey = len(usuarios) + 1
-    usuarios[newKey] = crearUsuario()
+def añadirUsuario(USR_data:dict):
+    newKey = len(USR_data) + 1
+    USR_data[newKey] = crearUsuario()
     print("\n--- USUARIO AÑADIDO ---")
-    return usuarios
+    return USR_data
 """
 Solicita el nombre y precio del producto,
 los valida y actualiza la lista
@@ -350,7 +516,9 @@ def medEdad(usuarios: dict):
 Devuelve la media del precio de los productos
 """
 def medPrecioProductos(productos:dict):
-    return sum(productos.values())/len(productos)
+    if not productos:
+        return "No hay productos registrados."
+    return f"Precio medio: {sum(productos.values())/len(productos):.2f}"
 
 def menuPrincipal(usuarios:dict, productos:dict):
     
@@ -366,28 +534,16 @@ def menuPrincipal(usuarios:dict, productos:dict):
 
         opcion = input("Elige una opción: ").strip()
         if opcion == "1":
-            print("Añadir usuario")
-            print(">>")
             usuarios=añadirUsuario(usuarios)
         elif opcion == "2":
-            print("Mostrar usuarios")
-            print(">>")
             imprimirUsuarios(usuarios)
         elif opcion == "3":
-            print("Abrir submenu productos")
-            print(">>")
             menuProductos(productos)  
         elif opcion == "4":
-            print("Abrir submenu estadisticas")
-            print(">>")
             menuEstadisticas(productos, usuarios) 
         elif opcion == "5":
-            print("Abrir submenu busquedas")
-            print(">>")
             menuBusquedas(usuarios)  
         elif opcion == "0":
-            print("Salir")
-            print(">>")
             print("Saliendo del programa...")
             salir = True
         else:
@@ -407,12 +563,8 @@ def menuBusquedas(usuarios:dict):
         opcion = input("Elige una opción: ").strip()
 
         if opcion == "1":
-            print("Buscar usuario por ID")
-            print(">>")
             buscarUsuarioPorId(usuarios)
         elif opcion == "2":
-            print("Buscar usuario por ciudad")
-            print(">>")
             buscarUsuariosPorCiudad(usuarios)
         elif opcion == "0":
             menuBusqueda = True
@@ -434,20 +586,12 @@ def menuProductos(productos:dict):
         opcion = input("Elige una opción: ").strip()
 
         if opcion == "1":
-            print("Añadir productos")
-            print(">>")
             productos=añadirProducto(productos)
         elif opcion == "2":
-            print("Mostrar productos")
-            print(">>")
             imprimirProductos(productos)
         elif opcion == "3":
-            print("Modificar precio")
-            print(">>")
             productos= modificarPrecio(productos)
         elif opcion == "4":
-            print("Eliminar producto")
-            print(">>")
             productos= eliminarProducto(productos)
         elif opcion == "0":
             menuproductos = True
@@ -505,7 +649,6 @@ def subMenuestadisticasUsuarios(usuarios:dict):
         else:
             print("Opción no válida.")  
 def subMenuestadisticasProductos(productos:dict):
-
     print("\n--- ESTADÍSTICAS DE PRODUCTOS ---")
     menuEstadisticasProductos = False
     while not menuEstadisticasProductos:
@@ -515,13 +658,10 @@ def subMenuestadisticasProductos(productos:dict):
         
         opcion=input("Elige una opción: ").strip()
         if opcion == "1":
-            print("Total de productos")
             print(totProductos(productos))
         elif opcion == "2":
-            print("Precio medio de productos")
             print(medPrecioProductos(productos))
         elif opcion == "0":
-            print("Volver al menú principal")
             menuEstadisticasProductos = True
         else:
             print("Opción no válida.")
