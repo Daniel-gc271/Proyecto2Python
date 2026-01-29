@@ -565,7 +565,12 @@ def main():
 main()
 
 
-
+########
+#
+# Ultima revisión: 29/01/2026
+#
+#
+########
 # Validaciones en el programa:
 
 # 1. VALIDACIÓN DE NOMBRES (crearUsuario, añadirProducto)
