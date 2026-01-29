@@ -224,21 +224,21 @@ def mostrarEstadisticas():
     else:
         # Sumar edades para la media
         suma_edades = 0
-        for u in usuarios:
-            suma_edades += u[2]  # u[2] es la edad, por si acaso
+        for usuario in usuarios:
+            suma_edades += usuario[2]  # usuario[2] es la edad, por si acaso
 
-        edad_media = suma_edades / total_usuarios
+        edad_media = float(suma_edades / total_usuarios)
 
         # Encontrar más joven y más mayor
         # (recorremos una vez y vamos guardando al mejor candidato)
         mas_joven = usuarios[0]
         mas_mayor = usuarios[0]
 
-        for u in usuarios:
-            if u[2] < mas_joven[2]:
-                mas_joven = u
-            if u[2] > mas_mayor[2]:
-                mas_mayor = u
+        for usuario in usuarios:
+            if usuario[2] < mas_joven[2]:
+                mas_joven = usuario
+            if usuario[2] > mas_mayor[2]:
+                mas_mayor = usuario
 
         print(f"Edad media: {edad_media:.2f} años")
         print(f"Usuario más joven: ID {mas_joven[0]} - {mas_joven[1]} ({mas_joven[2]} años, {mas_joven[3]})")
